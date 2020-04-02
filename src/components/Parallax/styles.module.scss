@@ -1,0 +1,54 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+.Parallax {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.ParallaxImg {
+  max-width: 110%;
+  @include media(1260px) {
+    max-width: 200%;
+  }
+  @include tablets {
+    max-width: none;
+    height: 110%;
+  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ParallaxLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.cloud-4 {
+  width: 17%;
+  height: auto;
+  left: 0;
+  top: 15%;
+}
+.cloud-7 {
+  width: 22%;
+  height: auto;
+  left: -10%;
+  top: 37%;
+  transform: translateX(-100%);
+}
+
+.cloud-10 {
+  width: 75%;
+  top: auto;
+  height: auto;
+  left: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  @include tablets {
+    width: 210%;
+  }
+}
